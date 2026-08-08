@@ -5,6 +5,7 @@ public class Movie
     public int Id { get; set; }
     public string Title { get; set; } = "";
     public int Rating { get; set; }        // 例: 5段階評価
+    public string Category { get; set; } = "未分類";
     public string Comment { get; set; } = "";
     public DateTime WatchedDate { get; set; }
 }
