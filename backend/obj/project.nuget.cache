@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "jahpkY3ssSs=",
+  "success": true,
+  "projectFilePath": "/Users/masakienomoto/MovieDiaryApp/backend/backend.csproj",
+  "expectedPackageFiles": [
+    "/Users/masakienomoto/.nuget/packages/microsoft.aspnetcore.openapi/10.0.10/microsoft.aspnetcore.openapi.10.0.10.nupkg.sha512",
+    "/Users/masakienomoto/.nuget/packages/microsoft.openapi/2.7.5/microsoft.openapi.2.7.5.nupkg.sha512"
+  ],
+  "logs": []
+}
