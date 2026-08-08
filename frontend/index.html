@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>映画感想ノート</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>🎬 映画感想ノート</h1>
+
+  <form id="movie-form">
+    <input type="text" id="title" placeholder="映画タイトル" required>
+    <input type="number" id="rating" min="1" max="5" placeholder="評価(1〜5)" required>
+    <input type="date" id="watchedDate" required>
+    <textarea id="comment" placeholder="感想"></textarea>
+    <button type="submit">追加</button>
+  </form>
+
+  <ul id="movie-list"></ul>
+
+  <script src="script.js"></script>
+</body>
+</html>
