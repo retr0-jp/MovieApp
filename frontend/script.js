@@ -1,0 +1,1 @@
+const API_URL = "http://localhost:5204/api/movies";
