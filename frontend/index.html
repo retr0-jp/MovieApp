@@ -11,23 +11,35 @@
     <h1 class="mb-4">🎬 映画感想ノート</h1>
 
     <form id="movie-form" class="card card-body mb-4">
-      <div class="mb-3">
-        <input type="text" id="title" class="form-control" placeholder="映画タイトル" required>
-      </div>
-      <div class="row mb-3">
-        <div class="col">
-          <input type="number" id="rating" class="form-control" min="1" max="5" placeholder="評価(1〜5)" required>
-        </div>
-        <div class="col">
-          <input type="date" id="watchedDate" class="form-control" required>
-        </div>
-      </div>
-      <div class="mb-3">
-        <textarea id="comment" class="form-control" placeholder="感想"></textarea>
-      </div>
-      <button type="submit" class="btn btn-primary">追加</button>
-    </form>
+    <div class="mb-3">
+    <input type="text" id="title" class="form-control" placeholder="映画タイトル" required>
+    </div>
+    <div class="row mb-3">
+    <div class="col">
+      <select id="category" class="form-select">
+      <option value="アクション">アクション</option>
+      <option value="コメディ">コメディ</option>
+      <option value="ドラマ">ドラマ</option>
+      <option value="ホラー">ホラー</option>
+      <option value="SF">SF</option>
+      <option value="アニメ">アニメ</option>
+      <option value="その他">その他</option>
+      </select>
+    </div>
+    <div class="col">
+      <input type="number" id="rating" class="form-control" min="1" max="5" placeholder="評価(1〜5)" required>
+    </div>
+    <div class="col">
+      <input type="date" id="watchedDate" class="form-control" required>
+    </div>
+  </div>
+  <div class="mb-3">
+    <textarea id="comment" class="form-control" placeholder="感想"></textarea>
+  </div>
+  <button type="submit" class="btn btn-primary">追加</button>
+  </form>
 
+  <div id="movie-list"></div>
     <ul id="movie-list" class="list-unstyled"></ul>
   </div>
 
