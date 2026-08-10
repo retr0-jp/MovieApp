@@ -1,0 +1,23 @@
+.star-rating {
+  display: flex;
+  flex-direction: row-reverse; /* 見た目の順番を反転させるトリック */
+  justify-content: flex-end;
+  font-size: 2rem;
+}
+
+.star-rating input {
+  display: none; /* ラジオボタン自体は隠す */
+}
+
+.star-rating label {
+  color: #ccc;
+  cursor: pointer;
+  transition: color 0.15s;
+}
+
+/* 選択済み、またはホバーで星を黄色に */
+.star-rating input:checked ~ label,
+.star-rating label:hover,
+.star-rating label:hover ~ label {
+  color: #ffc107;
+}

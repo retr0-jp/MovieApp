@@ -59,7 +59,8 @@ function startEdit(id, title, category, rating, watchedDate, comment) {
   editingId = id;
   document.getElementById("title").value = title;
   document.getElementById("category").value = category;
-  document.getElementById("rating").value = rating;
+  const starInput = document.getElementById(`star${rating}`);
+  if (starInput) starInput.checked = true;
   document.getElementById("watchedDate").value = watchedDate;
   document.getElementById("comment").value = comment;
   document.querySelector("button[type='submit']").textContent = "更新";
@@ -71,12 +72,17 @@ async function deleteMovie(id) {
   loadMovies();
 }
 
+function getSelectedRating() {
+  const checked = document.querySelector('input[name="rating"]:checked');
+  return checked ? Number(checked.value) : 0;
+}
+
 form.addEventListener("submit", async (e) => {
   e.preventDefault();
   const movieData = {
     title: document.getElementById("title").value,
     category: document.getElementById("category").value,
-    rating: Number(document.getElementById("rating").value),
+    rating: getSelectedRating(), 
     watchedDate: document.getElementById("watchedDate").value,
     comment: document.getElementById("comment").value,
   };
